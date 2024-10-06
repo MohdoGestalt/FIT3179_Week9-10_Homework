@@ -3,8 +3,8 @@
     "title": {
         "text": "Average Download Speed in Malaysian States (kbps)"
     },
-    "width": 400,
-    "height": 400,
+    "width": 300,
+    "height": 300,
     "projection": {"type": "equalEarth"},
     "data": {
         "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
