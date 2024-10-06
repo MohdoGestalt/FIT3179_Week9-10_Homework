@@ -14,7 +14,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "ookla_country_kbps.csv",
+          "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_country_kbps.csv",
           "format": {"type": "csv"}
         },
         "key": "SOVEREIGNT", 
