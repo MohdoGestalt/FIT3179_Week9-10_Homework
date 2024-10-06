@@ -34,8 +34,7 @@
             <div class="l-box" style="display: flex; justify-content: center; align-items: center;">
                 <!-- <img src = "images/test.svg"/> -->
                 <div id="vis1" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
-                    <canvas width="425" height="232" class="marks">
-                    </canvas>
+                    <canvas width="800" height="400" class="marks"></canvas>
                     <form class="vega-bindings"></form>
                 </div>
             </div>
@@ -51,14 +50,19 @@
         </div>
         <div class="pure-u-1-2">
             <h2 id="MYSpeed Heading">Internet Speeds over Different States of Malaysia</h2>
-            <p>insert image after creating data</p>
+            <div id="vis2" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
+                <canvas width="800" height="400" class="marks"></canvas>
+                <form class="vega-bindings"></form>
+            </div>
         </div>
     </div>
 
     <!-- Visualisation JSONS -->
     <script>
         var specVis1 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test.json";
+        var specVis2 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test2.json";
         vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false })
 
     </script>
 </body>

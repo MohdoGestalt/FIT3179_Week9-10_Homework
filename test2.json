@@ -15,7 +15,7 @@
             "lookup": "properties.Name",
             "from":{
                 "data": {
-                    "url": "ookla_my_states.csv"
+                    "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_states.csv"
                 },
                 "key": "name",
                 "fields": ["avg_d_kbps"]
