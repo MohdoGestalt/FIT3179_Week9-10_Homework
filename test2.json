@@ -28,7 +28,7 @@
             "type": "quantitative",
             "title": "Download Speed (kbps)",
             "scale": {
-                "domain": [0, 230000],
+                "domain": [125000, 250000],
                 "range": ["#FFFFFF", "#000f56"]
             }
         },
