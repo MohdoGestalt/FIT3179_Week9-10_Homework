@@ -50,13 +50,13 @@
                 </div>
             </div>
             <h2 id="MYSpeed Heading" style="text-align: left;">Internet Speeds over Different States of Malaysia</h2>
-            <div class="pure-u-1-2">
+            <div class="pure-u-3-5">
                 <div id="vis2" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
                     <canvas width="800" height="400" class="marks"></canvas>
                     <form class="vega-bindings"></form>
                 </div>
             </div>
-            <div class="pure-u-1-2">
+            <div class="pure-u-2-5">
                 <p>This map shows varying average download speeds across Malaysian states, with darker areas having faster speeds. The differences suggest unequal internet access across the country.</p>
             </div>
         </div>
@@ -65,7 +65,7 @@
     <!-- Visualisation JSONS -->
     <script>
         var specVis1 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test.json";
-        var specVis2 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test2.json";
+        var specVis2 = "test3.json";
         vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
         vegaEmbed('#vis2', specVis2, { "actions": false })
 

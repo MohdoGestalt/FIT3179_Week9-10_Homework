@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 600,
+    "title": "Average Download Speed over a number of Devices in Malaysia",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+        {
+            "data": {
+                "url": "my.topojson",
+                "format": {"type": "topojson", "feature": "my"}
+            },
+            "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
+            "white"}
+            },
+        {
+            "data": {
+                "url":"ookla_my_coord.csv"
+            },
+            "transform": [
+                {"sort": {"field": "avg_d_kbps", "order": "descending"}}
+            ],
+            "mark": {"type": "circle", "tooltip": {"content": "data"}},
+            "encoding": {
+                "longitude": {"field": "longitude", "type":
+                "quantitative"},
+                "latitude": {"field": "latitude", "type":
+                "quantitative"},
+                "size": {
+                    "field": "devices",
+                    "type": "quantitative",
+                    "title": "Number of Devices used for Average",
+                    "scale": {"domain": [0, 1500]}
+                },
+                "color": {
+                    "field": "avg_d_kbps",
+                    "type": "quantitative",
+                    "title": "Average Tile Download Speed",
+                    "scale": {"domain": [0, 300000], "scheme": "blues"}
+                }
+            }
+        }
+    ]
+}
