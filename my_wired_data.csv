@@ -1,0 +1,4 @@
+,provider,avg_lat_ms_dsl,avg_lat_ms_fibre,d>90%advertised_time_fibre,late<85ms_time_fibre,%packetloss_fibre,d>90%advertised_time_dsl,late<85ms_time_dsl
+0,Maxis,23.32,12.69,98.05,96.25,0.08,93.35,100.0
+1,TIME,0.0,5.91,75.23,100.0,0.0,0.0,0.0
+2,TM,20.63,14.01,99.88,100.0,0.0,100.0,100.0

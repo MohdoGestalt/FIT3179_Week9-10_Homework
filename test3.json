@@ -29,7 +29,7 @@
                 "size": {
                     "field": "devices",
                     "type": "quantitative",
-                    "title": "Number of Devices used for Average",
+                    "title": "Number of Devices Tested",
                     "scale": {"domain": [0, 1500]}
                 },
                 "color": {

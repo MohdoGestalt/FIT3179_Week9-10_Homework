@@ -26,14 +26,14 @@
 <body>
     <div class="page">
         <div class="pure-g">
-            <!--Elements visible to users go here-->
+            <!--Heading and small paragraph on top-->
             <div class="pure-u-1" style="text-align: center; padding-left: 2vw; padding-right: 2vw;">
                 <h1 id="Title Heading">Deep Dive into Malaysian Internet Services</h1>
                 <p>Ever wondered why some websites load in a blink while others lag? Internet speed is the key, and it varies widely across the globe. Understanding this can help you appreciate the differences and challenges people face in different regions. Now, let’s dive into a map showing each country's average internet speed and see how the world compares.</p>
             </div>
+            <!-- World average download speed and paragraph to the right -->
             <div class="pure-u-18-24">
                 <div class="l-box" style="display: flex; justify-content: center; align-items: center;">
-                    <!-- <img src = "images/test.svg"/> -->
                     <div id="vis1" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
                         <canvas width="800" height="400" class="marks"></canvas>
                         <form class="vega-bindings"></form>
@@ -49,18 +49,35 @@
                     <p>This map highlights the global variation in average download speeds, measured in kilobits per second (Kbps). Darker regions indicate faster internet speeds, while lighter areas represent slower or missing data. Countries with 0 Kbps may not have recorded any data points.</p>
                 </div>
             </div>
+            <!-- Malaysia Heading and Graph -->
             <div class="pure-u-1">
-                <h2 id="MYSpeed Heading" style="text-align: left;">Internet Speeds over Different States of Malaysia</h2>
+                <h3 id="MYSpeed Heading" style="text-align: center;">Internet Speeds over Different States of Malaysia</h3>
                 <br>
             </div>
-            <div class="pure-u-1-5">
+            <div class="pure-u-6-24">
                 <p>This map shows varying average download speeds across Malaysian states, with darker areas having faster speeds. The differences suggest unequal internet access across the country.</p>
             </div>
-            <div class="pure-u-3-5">
+            <div class="pure-u-18-24">
                 <div id="vis2" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
                     <canvas width="800" height="400" class="marks"></canvas>
                     <form class="vega-bindings"></form>
                 </div>
+                <div style="text-align: center;">
+                    <small id="g1source">Data Sourced from <a href="https://github.com/teamookla/ookla-open-data?formCode=MG0AV3"> OOKLA's Open Data</a></small>
+                </div>
+            </div>
+            <!-- Half page split -->
+            <div class="pure-u-1-2">
+                <h3 style="text-align: center;">Wired Boroadband Service</h3>
+                <br>
+                <h2>Insert the graph for wired broadband here</h2>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sem dignissim morbi pretium efficitur quis. Mollis scelerisque id facilisi a nascetur mi in vitae. Nec bibendum ornare nisi lectus justo ultricies molestie faucibus. Libero erat mi aenean magnis pellentesque nulla; hendrerit maximus tempor. Neque inceptos sed nullam euismod nibh neque rhoncus aptent?</p>
+            </div>
+            <div class="pure-u-1-2">
+                <h3 style="text-align: center;">Wireless Broadband Service</h3>
+                <br>
+                <h2>insert the graph for wireless broadband here</h2>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sem dignissim morbi pretium efficitur quis. Mollis scelerisque id facilisi a nascetur mi in vitae. Nec bibendum ornare nisi lectus justo ultricies molestie faucibus. Libero erat mi aenean magnis pellentesque nulla; hendrerit maximus tempor. Neque inceptos sed nullam euismod nibh neque rhoncus aptent?</p>
             </div>
         </div>
     </div>
