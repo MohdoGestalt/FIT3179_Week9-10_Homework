@@ -1,25 +1,37 @@
 {
-   "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my_wired_data.csv"},
-   "height": 400,
-   "width": 400,
-   "title": "Malaysian Wired Broadband Service Performance",
-   "layer":[
+    "height": 400,
+    "width": 400,
+    "title": "Malaysian Wired Broadband Advertised Download Speed Up Time",
+    "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my_wired_data.csv"},
+    "layer":[{
+        "transform":[
+            {"filter": "datum.metric == 'd>90%advertised_time_fibre' || datum.metric == 'd>90%advertised_time_dsl'"},
+            {
+                "calculate": "datum.metric === 'd>90%advertised_time_fibre' ? 'Fiber (download)' : datum.metric === 'd>90%advertised_time_dsl' ? 'DSL (download)' : datum.metric",
+                "as": "Legend"}      
+            ],
+        "mark": "bar",
+        "encoding": {
+            "x": {"field": "provider", "type": "nominal", "title": "Internet Service Providers"},
+            "y": {"field": "value", "type": "quantitative",  "axis": {"title": "Percentage Time"}},
+            "xOffset": {"field": "Legend"},
+            "color": {"field": "Legend"}
+        }
+    },
     {
-       "mark": {"type":"bar", "color": "blue"},
+        "transform":[
+            {"filter": "datum.metric == 'avg_lat_ms_fibre' || datum.metric == 'avg_lat_ms_dsl'"},
+            {
+                "calculate": "datum.metric === 'avg_lat_ms_fibre' ? 'Fiber (ms)' : datum.metric === 'avg_lat_ms_dsl' ? 'DSL (ms)' : datum.metric",
+                "as": "Legend"}      
+            ],
+        "mark": "bar",
         "encoding": {
-        "x": {"field": "provider", "type": "nominal"},
-        "y": {"field": "d>90%advertised_time_fibre", "type": "quantitative"}
-       }
-   },
-   {
-        "mark": {"type": "bar", "color": "green"},
-        "encoding": {
-        "x": {"field": "provider", "type": "nominal"},
-        "y": {"field": "d>90%advertised_time_dsl", "type": "quantitative"}
-       
+            "x": {"field": "provider", "type": "nominal", "title": "Internet Service Providers"},
+            "y": {"field": "value", "type": "quantitative", "axis": {"title": "Latency in Miliseconds"}},
+            "xOffset": {"field": "Legend"},
+            "color": {"field": "Legend"}
+        }
     }
-   }
-   ],
-   "resolve": {"scale": {"y": "independent"}}
-
+    ]
 }
