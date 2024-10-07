@@ -1,7 +1,31 @@
-,provider,avg_d_kbps,dcon>1000kbps,dcon>2500kbps,avg_latency_ms,packet_loss
-0,Maxis,27580,97.59,94.16,40.64,0.04
-1,Digi,24050,95.21,89.75,66.5,0.15
-2,YTL,17650,98.05,91.08,58.65,0.01
-3,Celcom,16640,90.06,79.41,46.7,0.05
-4,Webe,16320,88.74,77.1,66.57,0.11
-5,U Mobile,15650,91.69,79.81,69.22,0.18
+,provider,metric,value
+0,Maxis,avg_d_kbps,27580.0
+1,Digi,avg_d_kbps,24050.0
+2,YTL,avg_d_kbps,17650.0
+3,Celcom,avg_d_kbps,16640.0
+4,Webe,avg_d_kbps,16320.0
+5,U Mobile,avg_d_kbps,15650.0
+6,Maxis,dcon>1000kbps,97.59
+7,Digi,dcon>1000kbps,95.21
+8,YTL,dcon>1000kbps,98.05
+9,Celcom,dcon>1000kbps,90.06
+10,Webe,dcon>1000kbps,88.74
+11,U Mobile,dcon>1000kbps,91.69
+12,Maxis,dcon>2500kbps,94.16
+13,Digi,dcon>2500kbps,89.75
+14,YTL,dcon>2500kbps,91.08
+15,Celcom,dcon>2500kbps,79.41
+16,Webe,dcon>2500kbps,77.1
+17,U Mobile,dcon>2500kbps,79.81
+18,Maxis,avg_latency_ms,40.64
+19,Digi,avg_latency_ms,66.5
+20,YTL,avg_latency_ms,58.65
+21,Celcom,avg_latency_ms,46.7
+22,Webe,avg_latency_ms,66.57
+23,U Mobile,avg_latency_ms,69.22
+24,Maxis,packet_loss,0.04
+25,Digi,packet_loss,0.15
+26,YTL,packet_loss,0.01
+27,Celcom,packet_loss,0.05
+28,Webe,packet_loss,0.11
+29,U Mobile,packet_loss,0.18

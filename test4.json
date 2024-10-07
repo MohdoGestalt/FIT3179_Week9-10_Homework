@@ -1,0 +1,25 @@
+{
+   "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my_wired_data.csv"},
+   "height": 400,
+   "width": 400,
+   "title": "Malaysian Wired Broadband Service Performance",
+   "layer":[
+    {
+       "mark": {"type":"bar", "color": "blue"},
+        "encoding": {
+        "x": {"field": "provider", "type": "nominal"},
+        "y": {"field": "d>90%advertised_time_fibre", "type": "quantitative"}
+       }
+   },
+   {
+        "mark": {"type": "bar", "color": "green"},
+        "encoding": {
+        "x": {"field": "provider", "type": "nominal"},
+        "y": {"field": "d>90%advertised_time_dsl", "type": "quantitative"}
+       
+    }
+   }
+   ],
+   "resolve": {"scale": {"y": "independent"}}
+
+}
