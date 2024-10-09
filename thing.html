@@ -68,7 +68,7 @@
             </div>
             <!-- Half page split -->
             <div class="pure-u-1-2">
-                <h3 style="text-align: center;">Wired Boroadband Service</h3>
+                <h3 style="text-align: center;">Internet Service Providers</h3>
                 <br>
                 <div id="vis3" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
                     <canvas width="800" height="400" class="marks"></canvas>
@@ -77,9 +77,12 @@
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sem dignissim morbi pretium efficitur quis. Mollis scelerisque id facilisi a nascetur mi in vitae. Nec bibendum ornare nisi lectus justo ultricies molestie faucibus. Libero erat mi aenean magnis pellentesque nulla; hendrerit maximus tempor. Neque inceptos sed nullam euismod nibh neque rhoncus aptent?</p>
             </div>
             <div class="pure-u-1-2">
-                <h3 style="text-align: center;">Wireless Broadband Service</h3>
+                <h3 style="text-align: center;">State, Speed and Latency</h3>
                 <br>
-                <h2>insert the graph for wireless broadband here</h2>
+                <div id="vis4" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;">
+                    <canvas width="800" height="400" class="marks"></canvas>
+                    <form class="vega-bindings"></form>
+                </div>
                 <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sem dignissim morbi pretium efficitur quis. Mollis scelerisque id facilisi a nascetur mi in vitae. Nec bibendum ornare nisi lectus justo ultricies molestie faucibus. Libero erat mi aenean magnis pellentesque nulla; hendrerit maximus tempor. Neque inceptos sed nullam euismod nibh neque rhoncus aptent?</p>
             </div>
         </div>
@@ -89,11 +92,13 @@
     <script>
         var specVis1 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test.json";
         var specVis2 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test3.json";
-        var specVis3 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test4.json"
+        var specVis3 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test4.json";
+        var specVis4 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test5.json";
 
         vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
         vegaEmbed('#vis2', specVis2, { "actions": false })
         vegaEmbed('#vis3', specVis3, {"actions": false})
+        vegaEmbed('#vis4', specVis4, {"actions": false})
 
     </script>
 </body>

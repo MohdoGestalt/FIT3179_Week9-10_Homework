@@ -1,13 +1,38 @@
 {
     "height": 400,
     "width": 400,
-    "title": "Malaysian Wired Broadband Advertised Download Speed Up Time",
-    "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my_mobile_data.csv"},
-    "mark": "bar",
-    "encoding":{
-        "x": {"field": "provider", "type": "nominal"},
-        "y": {"field": "value", "type": "quantitative"}
+    "title": "Speed and Latency Test Results from States",
+    "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"},
+    "mark": "circle",
+    "transform": [
+    {"filter": "datum.avg_lat_ms > 0"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "avg_d_kbps",
+            "type": "quantitative",
+            "title": "Average Download Speed (kbps)",
+            "scale":{
+                "type": "log"
+            }
+        },
+        "y": {
+            "field": "avg_lat_ms",
+            "type": "quantitative",
+            "title": "Average Latency (ms)",
+            "scale":{
+                "type": "log"
+            }
+        },
+        "color":{
+            "field": "name",
+            "type": "nominal",
+            "title": "State of Malaysia"
+        },
+        "size":{
+            "field": "tests",
+            "type": "quantitative",
+            "title": "Number of Tests"
+        }
     }
-
-
 }
