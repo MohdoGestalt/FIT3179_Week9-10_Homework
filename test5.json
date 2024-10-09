@@ -1,63 +1,61 @@
 {
-    "width": 400,
-    "height": 350,
-    "data": {
-      "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"
+  "data": {
+    "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"
+  },
+  "mark": "circle",
+  "transform": [
+    {
+      "filter": "datum.avg_lat_ms > 0"
     },
-    "mark": "circle",
-    "transform": [
-      {
-        "filter": "datum.avg_lat_ms > 0"
-      },
-      {
-        "filter": {
-          "field": "name",
-          "oneOf": [
-            "Johor", "Kedah", "Kelantan", "Kuala Lumpur", "Labuan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Palau Pinang", "Putrajaya", "Sabah", "Sarawak", "Selangor", "Terengganu" 
-          ]
-        }
-      }
-    ],
-    "params": [
-      {
-        "name": "state_selection",
-        "select": {
-          "type": "point",
-          "fields": ["name"],
-          "bind": {
-            "input": "select",
-            "options": ["Johor", "Kedah", "Kelantan", "Kuala Lumpur", "Labuan", "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis", "Palau Pinang", "Putrajaya", "Sabah", "Sarawak", "Selangor", "Terengganu" ]
-          }
-        }
-      }
-    ],
-    "encoding": {
-      "x": {
-        "field": "avg_d_kbps",
-        "type": "quantitative",
-        "title": "Average Download Speed (kbps)",
-        "scale": {
-          "type": "log"
-        }
-      },
-      "y": {
-        "field": "avg_lat_ms",
-        "type": "quantitative",
-        "title": "Average Latency (ms)",
-        "scale": {
-          "type": "log"
-        }
-      },
-      "color": {
+    {
+      "filter": {
         "field": "name",
-        "type": "nominal",
-        "title": "State of Malaysia"
-      },
-      "size": {
-        "field": "tests",
-        "type": "quantitative",
-        "title": "Number of Tests"
+        "oneOf": [
+          "Kedah", "Johor", "Kuala Lumpur", "Sabah", "Sarawak", "Selangor"
+        ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "state_selection",
+      "select": {
+        "type": "point",
+        "fields": ["name"],
+        "bind": {
+          "input": "select",
+          "options": ["Kedah", "Johor", "Kuala Lumpur", "Sabah", "Sarawak", "Selangor"]
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "avg_d_kbps",
+      "type": "quantitative",
+      "title": "Average Download Speed (kbps)",
+      "scale": {
+        "type": "log"
       }
     },
-    "title": "Speed and Latency Test Results from States"
-  }
+    "y": {
+      "field": "avg_lat_ms",
+      "type": "quantitative",
+      "title": "Average Latency (ms)",
+      "scale": {
+        "type": "log"
+      }
+    },
+    "color": {
+      "field": "name",
+      "type": "nominal",
+      "title": "State of Malaysia"
+    },
+    "size": {
+      "field": "tests",
+      "type": "quantitative",
+      "title": "Number of Tests"
+    }
+  },
+  "title": "Speed and Latency Test Results from States"
+}
