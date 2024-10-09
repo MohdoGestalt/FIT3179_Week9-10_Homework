@@ -1,61 +1,38 @@
 {
-  "data": {
-    "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"
-  },
-  "mark": "circle",
-  "transform": [
-    {
-      "filter": "datum.avg_lat_ms > 0"
-    },
-    {
-      "filter": {
-        "field": "name",
-        "oneOf": [
-          "Kedah", "Johor", "Kuala Lumpur", "Sabah", "Sarawak", "Selangor"
-        ]
-      }
-    }
-  ],
-  "params": [
-    {
-      "name": "state_selection",
-      "select": {
-        "type": "point",
-        "fields": ["name"],
-        "bind": {
-          "input": "select",
-          "options": ["Kedah", "Johor", "Kuala Lumpur", "Sabah", "Sarawak", "Selangor"]
+    "height": 400,
+    "width": 350,
+    "title": "Speed and Latency Test Results from States",
+    "data": {"url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"},
+    "mark": "circle",
+    "transform": [
+    {"filter": "datum.avg_lat_ms > 0"}
+    ],
+    "encoding": {
+        "x": {
+            "field": "avg_d_kbps",
+            "type": "quantitative",
+            "title": "Average Download Speed (kbps)",
+            "scale":{
+                "type": "log"
+            }
+        },
+        "y": {
+            "field": "avg_lat_ms",
+            "type": "quantitative",
+            "title": "Average Latency (ms)",
+            "scale":{
+                "type": "log"
+            }
+        },
+        "color":{
+            "field": "name",
+            "type": "nominal",
+            "title": "State of Malaysia"
+        },
+        "size":{
+            "field": "tests",
+            "type": "quantitative",
+            "title": "Number of Tests"
         }
-      }
     }
-  ],
-  "encoding": {
-    "x": {
-      "field": "avg_d_kbps",
-      "type": "quantitative",
-      "title": "Average Download Speed (kbps)",
-      "scale": {
-        "type": "log"
-      }
-    },
-    "y": {
-      "field": "avg_lat_ms",
-      "type": "quantitative",
-      "title": "Average Latency (ms)",
-      "scale": {
-        "type": "log"
-      }
-    },
-    "color": {
-      "field": "name",
-      "type": "nominal",
-      "title": "State of Malaysia"
-    },
-    "size": {
-      "field": "tests",
-      "type": "quantitative",
-      "title": "Number of Tests"
-    }
-  },
-  "title": "Speed and Latency Test Results from States"
 }
