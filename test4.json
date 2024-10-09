@@ -28,10 +28,11 @@
         "mark": "bar",
         "encoding": {
             "x": {"field": "provider", "type": "nominal", "title": "Internet Service Providers"},
-            "y": {"field": "value", "type": "quantitative", "axis": {"title": "Latency in Miliseconds"}},
+            "y": {"field": "value", "type": "quantitative", "axis": {"title": "Average Latency in Miliseconds"}},
             "xOffset": {"field": "Legend"},
             "color": {"field": "Legend"}
         }
     }
-    ]
+    ],
+    "resolve": {"scale": {"y": "independent"}}
 }
