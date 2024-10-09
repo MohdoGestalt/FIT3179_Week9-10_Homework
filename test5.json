@@ -1,4 +1,6 @@
 {
+    "width": 400,
+    "height": 350,
     "data": {
       "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_with_state.csv"
     },
