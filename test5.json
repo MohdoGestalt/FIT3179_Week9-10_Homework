@@ -22,9 +22,9 @@
     },
     "transform": [
       {"filter": "datum.avg_lat_ms > 0"},
-      {"filter": "indexof(State, datum.name) >= 0"}
+      {"filter": "datum.name == State"}
     ],
-    "mark": {"type": "circle", "size": 5},
+    "mark": {"type": "circle", "size": 5, "color": "#000f56"},
     "encoding": {
       "x": {
         "field": "avg_d_kbps",
@@ -37,11 +37,6 @@
         "type": "quantitative",
         "title": "Average Latency (ms)",
         "scale": {"type": "log"}
-      },
-      "color": {
-        "field": "name",
-        "type": "nominal",
-        "title": "State of Malaysia"
       }
     }
   }
