@@ -39,27 +39,6 @@
           {"field": "avg_d_kbps", "type": "quantitative", "title": "Average Download Speed (kbps)"}
         ]
         }
-    },
-    {
-        "data": {
-            "url":"https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_coord.csv"
-        },
-        "transform": [
-            {"sort": {"field": "avg_d_kbps", "order": "descending"}}
-        ],
-        "mark": {"type": "circle", "size": 1},
-        "encoding": {
-            "longitude": {"field": "longitude", "type":
-            "quantitative"},
-            "latitude": {"field": "latitude", "type":
-            "quantitative"},
-            "color": {
-                "field": "devices",
-                "type": "quantitative",
-                "title": "Average Tile Download Speed",
-                "scale": {"domain": [0, 300000], "scheme": "blues"}
-            }
-        }
     }
     ]
 }
