@@ -6,35 +6,60 @@
     "width": 300,
     "height": 300,
     "projection": {"type": "equalEarth"},
-    "data": {
-        "url": "https://raw.githubusercontent.com/jnewbery/CartogramMalaysia/refs/heads/master/public/data/malaysia-states.topojson",
-        "format": {"type": "topojson", "feature": "states"}
-    },
-    "transform": [
+    "layer": [
         {
-            "lookup": "properties.Name",
-            "from":{
-                "data": {
-                    "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_states.csv"
-                },
-                "key": "name",
-                "fields": ["avg_d_kbps"]
-            }
-        }],
-    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
-    "encoding": {
-        "color": {
-            "field": "avg_d_kbps",
-            "type": "quantitative",
-            "title": "Download Speed (kbps)",
-            "scale": {
-                "domain": [125000, 250000],
-                "range": ["#FFFFFF", "#000f56"]
-            }
+        "data": {
+            "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my.topojson",
+            "format": {"type": "topojson", "feature": "my"}
         },
-    "tooltip": [
-      {"field": "properties.Name", "type": "nominal", "title": "states"},
-      {"field": "avg_d_kbps", "type": "quantitative", "title": "Average Download Speed (kbps)"}
-    ]
+        "transform": [
+            {
+                "lookup": "properties.name",
+                "from":{
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_states.csv"
+                    },
+                    "key": "name",
+                    "fields": ["avg_d_kbps"]
+                }
+            }],
+        "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+        "encoding": {
+            "color": {
+                "field": "avg_d_kbps",
+                "type": "quantitative",
+                "title": "Download Speed (kbps)",
+                "scale": {
+                    "domain": [125000, 250000],
+                    "range": ["#FFFFFF", "#000f56"]
+                }
+            },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "states"},
+          {"field": "avg_d_kbps", "type": "quantitative", "title": "Average Download Speed (kbps)"}
+        ]
+        }
+    },
+    {
+        "data": {
+            "url":"https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_coord.csv"
+        },
+        "transform": [
+            {"sort": {"field": "avg_d_kbps", "order": "descending"}}
+        ],
+        "mark": {"type": "circle", "size": 1},
+        "encoding": {
+            "longitude": {"field": "longitude", "type":
+            "quantitative"},
+            "latitude": {"field": "latitude", "type":
+            "quantitative"},
+            "color": {
+                "field": "devices",
+                "type": "quantitative",
+                "title": "Average Tile Download Speed",
+                "scale": {"domain": [0, 300000], "scheme": "blues"}
+            }
+        }
     }
+    ]
 }

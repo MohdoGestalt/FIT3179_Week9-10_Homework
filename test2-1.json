@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": "Number of Devices used for Testing Download Speed Across Malaysia",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/my.topojson",
+                "format": {"type": "topojson", "feature": "my"}
+            },
+            "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
+            "white"}
+            },
+        {
+            "data": {
+                "url":"https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/ookla_my_coord.csv"
+            },
+            "transform": [
+                {"sort": {"field": "avg_d_kbps", "order": "descending"}}
+            ],
+            "mark": {"type": "circle", "size" : 2},
+            "encoding": {
+                "longitude": {"field": "longitude", "type":
+                "quantitative"},
+                "latitude": {"field": "latitude", "type":
+                "quantitative"},
+                "color": {
+                    "field": "devices",
+                    "type": "quantitative",
+                    "title": "Number of Devices Tested",
+                    "scale": {"type": "log", "range": ["#FFFFFF", "#000f56"]}
+                }
+            }
+        }
+    ]
+}
