@@ -33,6 +33,5 @@
             "color": {"field": "Legend"}
         }
     }
-    ],
-    "resolve": {"scale": {"y": "independent"}}
+    ]
 }
