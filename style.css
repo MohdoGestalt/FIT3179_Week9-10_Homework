@@ -28,3 +28,28 @@ body {
       padding-top: 50px;
     padding-top: 35px;
   }
+  
+body {
+    font-family: 'Merriweather', serif;
+}
+p {
+    font-family: 'Merriweather', serif;
+}
+
+/* Heading styles */
+h1, h3 {
+    font-family: 'Roboto', serif; /* Apply sans-serif font to headings */
+    background-color: #cec4fc; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    margin: 20px 0; /* Spacing above and below the box */
+    text-align: center; /* Center-align the text */
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}

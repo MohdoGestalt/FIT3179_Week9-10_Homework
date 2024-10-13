@@ -20,7 +20,7 @@
             "transform": [
                 {"sort": {"field": "avg_d_kbps", "order": "descending"}}
             ],
-            "mark": {"type": "circle", "size" : 2},
+            "mark": {"type": "circle", "size" : 4},
             "encoding": {
                 "longitude": {"field": "longitude", "type":
                 "quantitative"},
