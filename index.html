@@ -54,10 +54,10 @@
                 <h3 id="MYSpeed Heading" style="text-align: center;">Internet Speeds Across Malaysia</h3>
                 <br>
             </div>
-            <div class="pure-u-8-24" style="text-align: right;">
+            <div class="pure-u-4-24" style="text-align: right;">
                 <p>This map shows varying average download speeds across Malaysian states, with darker areas having faster speeds. The differences suggest unequal internet access across the country.</p>
             </div>
-            <div class="pure-u-16-24">
+            <div class="pure-u-20-24">
                 <div id="vis2" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="display: flex; justify-content: center; align-items: center;">
                     <canvas width="800" height="400" class="marks"></canvas>
                     <form class="vega-bindings"></form>
@@ -65,6 +65,18 @@
                 <div style="text-align: center;">
                     <small id="g1source">Data Sourced from <a href="https://github.com/teamookla/ookla-open-data?formCode=MG0AV3"> OOKLA's Open Data</a></small>
                 </div>
+            </div>
+            <div class="pure-u-20-24">
+                <div id="vis2-1" class="vis-container vega-embed" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="display: flex; justify-content: center; align-items: center;">
+                    <canvas width="800" height="400" class="marks"></canvas>
+                    <form class="vega-bindings"></form>
+                </div>                
+                <div style="text-align: center;">
+                    <small id="g1source">Data Sourced from <a href="https://github.com/teamookla/ookla-open-data?formCode=MG0AV3"> OOKLA's Open Data</a></small>
+                </div>
+            </div>
+            <div class="pure-u-4-24" style="text-align: left;">
+                <p>This map shows varying average download speeds across Malaysian states, with darker areas having faster speeds. The differences suggest unequal internet access across the country.</p>
             </div>
             <!-- Half page split for header and Graphs-->
             <div class="pure-u-1-2">
@@ -95,12 +107,14 @@
     <!-- Visualisation JSONS -->
     <script>
         var specVis1 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test.json";
-        var specVis2 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test3.json";
+        var specVis2 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test2.json";
+        var specVis2_1 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test2-1.json"
         var specVis3 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test4.json";
         var specVis4 = "https://raw.githubusercontent.com/MohdoGestalt/FIT3179_Week9-10_Homework/refs/heads/main/test5.json";
 
         vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
         vegaEmbed('#vis2', specVis2, { "actions": false })
+        vegaEmbed('#vis2-1', specVis2_1, { "actions": false })
         vegaEmbed('#vis3', specVis3, {"actions": false})
         vegaEmbed('#vis4', specVis4, {"actions": false})
 
