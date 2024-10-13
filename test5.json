@@ -11,7 +11,7 @@
           "options": [
             "Johor", "Kedah", "Kelantan", "Kuala Lumpur", "Labuan",
             "Melaka", "Negeri Sembilan", "Pahang", "Perak", "Perlis",
-            "Pulau Penang", "Putrajaya", "Sabah", "Sarawak", "Selangor", "Terengganu"
+            "Pulau Pinang", "Putrajaya", "Sabah", "Sarawak", "Selangor", "Terengganu"
           ],
           "multiple": true
         }
